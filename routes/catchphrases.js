@@ -1,8 +1,3 @@
-/**
- * EACH REQUEST TO THE BACKEND IS EVENTUALLY EXECUTED BY A CONTROLLER.
- * THE ROUTE FILE MAPS A REQUEST FROM A CLIENT TO A CONTROLLER.
- */
-
 const express = require("express");
 const router = express.Router();
 
@@ -58,12 +53,12 @@ router.get('/:id', async (req, res) => {
  *        schema:
  *          type: object
  *          properties:
- *              movieName:
- *                type: string
- *              catchphrase:
- *                type: string
- *              movieContext:
- *                type: string
+ *            movieName:
+ *              type: string
+ *            catchphrase:
+ *              type: string
+ *            movieContext:
+ *              type: string
  *      responses:
  *        201:
  *          description: Created a new catchphrase
@@ -88,27 +83,27 @@ router.post('/', async (req, res) => {
  * @swagger
  * /catchphrases/{id}
  * 	 patch:
- * 		 parameters:
- * 			- in: path
- * 				name: id
- * 				required: true
- * 				type: string
- * 				description The catchphrase ID
- * 			- in: body
- * 				name: catchphrase
- * 				description: Update a catchphrase
- * 				schema:
- * 					type: object
- * 					properties:
- * 						movieName:
- * 							type: string
- * 						catchphrase:
- * 							type: string
- * 						movieName:
- * 							type: string
- * 		 	responses:
- * 				201:
- * 					description: Created a newly updated catchphrase
+ * 	   parameters:
+ * 	     - in: path
+ * 		   name: id
+ * 		   required: true
+ * 		   type: string
+ * 		   description: The catchphrase ID
+ * 		 - in: body
+ * 		   name: catchphrase
+ * 		   description: Update a catchphrase
+ * 		   schema:
+ * 		     type: object
+ * 			 properties:
+ * 			   movieName:
+ * 			     type: string
+ * 			   catchphrase:
+ * 			     type: string
+ * 			   movieName:
+ * 			     type: string
+ *     responses:
+ * 	     201:
+ * 	       description: Created a newly updated catchphrase
  */
 router.put('/:id', async (req, res) => {
     let movieName = null, catchphrase = null, movieContext = null;
@@ -128,18 +123,18 @@ router.put('/:id', async (req, res) => {
 
 /**
  * @swagger
- * /catchphrases/{id}
+ * /catchphrases/{id}:
  * 	 delete:
- * 		 parameters:
- * 			- in: path
- * 				name: id
- * 				required: true
- * 				type: string
- * 				description: The catchphrase ID.
- * 			description: Delete a catchphrase by id
- * 			responses:
- * 				200:
- * 					description: Returns the status of deletion process
+ *     parameters:
+ * 	     - in: path
+ * 		   name: id
+ * 		   required: true
+ * 		   type: string
+ * 		   description: The catchphrase ID.
+ *     description: Delete a catchphrase by id
+ *     responses:
+ * 	     200:
+ * 		   description: Returns the status of deletion process
  */
 router.delete('/:id', async (req, res) => {
     let response = await removeCatchphrase(req.params.id);
