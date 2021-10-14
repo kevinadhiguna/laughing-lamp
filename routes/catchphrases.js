@@ -59,9 +59,9 @@ router.get('/:id', async (req, res) => {
  *              type: string
  *            movieContext:
  *              type: string
- *      responses:
- *        201:
- *          description: Created a new catchphrase
+ *     responses:
+ *       201:
+ *         description: Created a new catchphrase
  */
 router.post('/', async (req, res) => {
     let body = {
@@ -81,29 +81,29 @@ router.post('/', async (req, res) => {
 
 /**
  * @swagger
- * /catchphrases/{id}
- * 	 patch:
- * 	   parameters:
- * 	     - in: path
- * 		   name: id
- * 		   required: true
- * 		   type: string
- * 		   description: The catchphrase ID
- * 		 - in: body
- * 		   name: catchphrase
- * 		   description: Update a catchphrase
- * 		   schema:
- * 		     type: object
- * 			 properties:
- * 			   movieName:
- * 			     type: string
- * 			   catchphrase:
- * 			     type: string
- * 			   movieName:
- * 			     type: string
+ * /catchphrases/{id}:
+ *   patch:
+ *     parameters:
+ *      - in: path
+ *        name: id
+ *        required: true
+ *        type: string
+ *        description: The catchphrase ID.
+ *      - in: body
+ *        name: catchphrase
+ *        description: Update catchphrase
+ *        schema:
+ *          type: object
+ *          properties:
+ *            movieName:
+ *              type: string
+ *            catchphrase:
+ *              type: string
+ *            movieContext:
+ *              type: string
  *     responses:
- * 	     201:
- * 	       description: Created a newly updated catchphrase
+ *       201:
+ *         description: Created
  */
 router.put('/:id', async (req, res) => {
     let movieName = null, catchphrase = null, movieContext = null;
@@ -124,17 +124,17 @@ router.put('/:id', async (req, res) => {
 /**
  * @swagger
  * /catchphrases/{id}:
- * 	 delete:
+ *   delete:
  *     parameters:
- * 	     - in: path
- * 		   name: id
- * 		   required: true
- * 		   type: string
- * 		   description: The catchphrase ID.
+ *      - in: path
+ *        name: id
+ *        required: true
+ *        type: string
+ *        description: The catchphrase ID.
  *     description: Delete a catchphrase by id
  *     responses:
- * 	     200:
- * 		   description: Returns the status of deletion process
+ *       200:
+ *         description: Returns the requested catachphrase
  */
 router.delete('/:id', async (req, res) => {
     let response = await removeCatchphrase(req.params.id);
