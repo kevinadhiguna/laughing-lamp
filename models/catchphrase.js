@@ -1,3 +1,7 @@
+/**
+ * THE MODEL FILE MANAGES THE DATA OF AN APPLICATION.
+ */
+
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;

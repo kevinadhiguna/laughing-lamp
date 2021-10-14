@@ -1,3 +1,7 @@
+/**
+ * THE CONTROLLER FILE CONTAINS THE LOGIC USED TO QUERY DATABASE (In this case, MongoDB).
+ */
+
 const Catchphrase = require('../models/catchphrase');
 
 // Get all catchphrases
