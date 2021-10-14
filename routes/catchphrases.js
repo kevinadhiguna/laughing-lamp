@@ -70,5 +70,5 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
-// Export router
+// Export routes
 module.exports = router;
