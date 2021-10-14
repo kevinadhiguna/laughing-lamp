@@ -1,5 +1,10 @@
 const express = require("express");
+
+// For MongoDB (database) configuration
 const connectDb = require("./config/db");
+
+// Import routes
+const { catchphrases } = require("./routes/index");
 
 const app = express();
 
@@ -9,9 +14,7 @@ connectDb();
 // parse requests of content-type : application/json
 app.use(express.json());
 
-app.get("/", (req, res) => {
-    res.json({ message: "Ssst.. do not spill the tea..." });
-});
+app.use('/catchphrases', catchphrases);
 
 const PORT = process.env.PORT || 5000;
 
