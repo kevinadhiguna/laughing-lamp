@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  laughing-lamp:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: laughing-lamp
+    environment:
+      PORT: ${PORT}
+      MONGODB_URI: ${MONGODB_URI}
+      ALLOWED_ORIGIN: ${ALLOWED_ORIGIN}
+    ports:
+      - '5000:5000'
