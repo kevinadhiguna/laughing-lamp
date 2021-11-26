@@ -23,14 +23,15 @@ const swaggerOptions = {
     swaggerDefinition: {
         info: {
             title: "Catchphrases REST API",
-            description: "A REST API powered by ExpressJS and MongoDB. This API provides movie catchphrases and the context of the catchprase in the movie.",
+            description:
+                "A REST API powered by ExpressJS and MongoDB. This API provides movie catchphrases and the context of the catchprase in the movie.",
         },
     },
-    apis: ["./routes/catchphrases.js"]
+    apis: ["./routes/catchphrases.js"],
 };
 
 // routes
-app.use('/catchphrases', catchphrases);
+app.use("/catchphrases", catchphrases);
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use("/", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
