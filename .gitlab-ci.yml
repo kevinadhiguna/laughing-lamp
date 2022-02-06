@@ -13,3 +13,5 @@ build-development:
     - docker tag ${CI_REGISTRY_IMAGE}":development-"${CI_COMMIT_SHORT_SHA} ${CI_REGISTRY_IMAGE}":development-latest"
     - docker push ${CI_REGISTRY_IMAGE}":development-"${CI_COMMIT_SHORT_SHA}
     - docker push ${CI_REGISTRY_IMAGE}":development-latest"
+  only:
+    - development 
