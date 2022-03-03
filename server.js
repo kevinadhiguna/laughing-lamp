@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+require("dotenv").config();
 
 // Swagger
 const swaggerJsDoc = require("swagger-jsdoc");
@@ -18,7 +19,7 @@ const swaggerOptions = {
     info: {
       title: "Catchphrases REST API",
       description:
-      "A REST API powered by ExpressJS and MongoDB. This API provides movie catchphrases and the context of the catchprase in the movie.",
+        "A REST API powered by ExpressJS and MongoDB. This API provides movie catchphrases and the context of the catchprase in the movie.",
     },
   },
   apis: ["./routes/catchphrases.js"],
