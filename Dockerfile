@@ -4,16 +4,14 @@ WORKDIR /app
 
 COPY package.json .
 COPY yarn.lock .
-
 RUN yarn --frozen-lockfile
 
-COPY . .
-# The above command should be refactored to :
-# COPY server.js .
-# COPY config/ .
-# COPY controllers/ .
-# COPY models/ .
-# COPY routes/ .
+COPY .dockerignore .dockerignore
+COPY config/ config/
+COPY models/ models/
+COPY routes/ routes/
+COPY server.js server.js
+COPY controllers/ controllers/
 
 EXPOSE 5000
 
