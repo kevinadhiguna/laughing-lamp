@@ -31,11 +31,12 @@ app.use("/", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 const { catchphrases } = require("./routes/index");
 app.use("/catchphrases", catchphrases);
 
-// port configuration
+// Port and Host/Hostname configuration
 const PORT = process.env.PORT || 5000;
+const HOSTNAME = process.env.HOSTNAME || "localhost";
 
 // Start server
-const server = app.listen(PORT, () => {
+const server = app.listen(PORT, HOSTNAME, () => {
   console.log(`🚀 Server has been launched on port ${PORT}`);
 });
 
