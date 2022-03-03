@@ -1,23 +1,25 @@
 /**
  * THE MODEL FILE MANAGES THE DATA OF AN APPLICATION.
  */
-
 const mongoose = require("mongoose");
 
-const Schema = mongoose.Schema;
-
-const catchphraseSchema = new Schema({
-  movieName: {
-    type: String,
+// Create schema
+const catchphraseSchema = new mongoose.Schema(
+  {
+    movieName: {
+      type: String,
+    },
+    catchphrase: {
+      type: String,
+    },
+    movieContext: {
+      type: String,
+    },
   },
-  catchphrase: {
-    type: String,
-  },
-  movieContext: {
-    type: String,
-  },
-});
+  {
+    timestamps: true,
+  }
+);
 
-const Catchphrase = mongoose.model("Catchphrase", catchphraseSchema);
-
-module.exports = Catchphrase;
+// Make model based on the schema above, then export it
+module.exports = mongoose.model("Catchphrase", catchphraseSchema);
