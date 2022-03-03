@@ -4,6 +4,8 @@ require("dotenv").config();
 
 // parse requests of content-type : application/json
 app.use(express.json());
+// x-www-urlencoded
+app.use(express.urlencoded({ extended: false }));
 
 // Connect to MongoDB
 const connectDb = require("./config/db");
