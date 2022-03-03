@@ -2,16 +2,16 @@ const express = require("express");
 const app = express();
 require("dotenv").config();
 
-// Swagger
-const swaggerJsDoc = require("swagger-jsdoc");
-const swaggerUi = require("swagger-ui-express");
+// parse requests of content-type : application/json
+app.use(express.json());
 
 // Connect to MongoDB
 const connectDb = require("./config/db");
 connectDb();
 
-// parse requests of content-type : application/json
-app.use(express.json());
+// Swagger
+const swaggerJsDoc = require("swagger-jsdoc");
+const swaggerUi = require("swagger-ui-express");
 
 // Swagger configuration
 const swaggerOptions = {
