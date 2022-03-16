@@ -44,8 +44,7 @@ const server = app.listen(PORT, HOSTNAME, () => {
 
 // Exit Node-express server based on https://stackoverflow.com/a/21739334
 process.on("SIGTERM", () => {
-  console.info("SIGTERM received");
-  console.log("Closing HTTP server...");
+  console.log("SIGTERM received, closing HTTP server...");
   server.close((err) => {
     console.log("HTTP server closed");
     process.exit(err ? 1 : 0);
