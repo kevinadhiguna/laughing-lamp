@@ -2,9 +2,6 @@
   "name": "laughing-lamp",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/kevinadhiguna/laughing-lamp.git",
-  "author": "kevinadhiguna <hi.kevinadhiguna@gmail.com>",
-  "license": "MIT",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
