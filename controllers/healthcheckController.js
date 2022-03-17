@@ -6,7 +6,13 @@ const isServiceHealthy = (req, res, next) => {
   const healthyData = {
     uptimeDuration: process.uptime(),
     message: "Service is healthy !",
-    time: today.toUTCString(), // "Thu, 11 May 2021 09:23:41 GMT"
+    time: today.toUTCString(),
+
+    // -- Notes --
+    // utcTime: today.toUTCString(), // Thu, 11 May 2021 09:23:41 GMT
+    // dateTime: today.toDateString(), // Thu May 11 2021
+    // isoTime: today.toISOString(), // 2021-05-11T09:23:41.924Z
+    // localeTime: today.toLocaleTimeString(), // 9:23:41 AM
   };
 
   const unhealthyData = {
