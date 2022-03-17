@@ -792,6 +792,11 @@ latest-version@^5.1.0:
   dependencies:
     package-json "^6.3.0"
 
+lil-http-terminator@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/lil-http-terminator/-/lil-http-terminator-1.2.2.tgz#f78944a3977eff5083ac29764940fb7d3806a6ff"
+  integrity sha512-2n6gKJIKgPjy4JfSlwsQnAA7wK4SEA1cegqdsYwr7qObVfIHdELjDGjEcYWJanfF/u/mRzIT2WPqhpzC6R9pZw==
+
 lodash.get@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
