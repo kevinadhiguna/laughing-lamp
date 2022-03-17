@@ -42,6 +42,15 @@ const server = app.listen(PORT, HOSTNAME, () => {
   console.log(`🚀 Server has been launched on port ${PORT}`);
 });
 
+// Handle interrupt signal (SIGINT)
+process.on("SIGINT", () => {
+  console.log("Received SIGINT, process interrupted...");
+  server.close((errSigint) => {
+    console.log("Error closing HTTP server after receiving SIGINT..");
+  });
+  process.exit();
+});
+
 // Exit Node-express server based on https://stackoverflow.com/a/21739334
 process.on("SIGTERM", () => {
   console.log("SIGTERM received, closing HTTP server...");
