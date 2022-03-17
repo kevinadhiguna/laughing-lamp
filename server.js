@@ -40,7 +40,9 @@ const HOSTNAME = process.env.HOSTNAME || "localhost";
 
 // Start server
 const server = app.listen(PORT, HOSTNAME, () => {
-  console.log(`🚀 Server has been launched on port ${PORT}`);
+  console.log(
+    `🚀 Server has been launched on ${HOSTNAME}:${PORT}, waiting for database connection..`
+  );
 });
 
 // Handle interrupt signal (SIGINT)
