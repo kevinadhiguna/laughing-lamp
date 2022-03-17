@@ -46,6 +46,7 @@ const server = app.listen(PORT, HOSTNAME, () => {
 });
 
 // == Graceful shutdown (handling signals such as SIGINT and SIGTERM) using 'lil-http-terminator' package ==
+// Reference : https://dev.to/koresar/lil-http-terminator-a-tiny-js-module-to-gracefully-shutdown-your-http-server-l0b
 
 const httpTerminator = require("lil-http-terminator")({ server });
 
