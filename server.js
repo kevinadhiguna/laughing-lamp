@@ -46,16 +46,16 @@ const server = app.listen(PORT, HOSTNAME, () => {
 process.on("SIGINT", () => {
   console.log("Received SIGINT, process interrupted...");
   server.close((errSigint) => {
-    console.log("Error closing HTTP server after receiving SIGINT..");
+    console.log("Closing HTTP server after receiving SIGINT..");
+    process.exit(errSigint ? 1 : 0);
   });
-  process.exit();
 });
 
 // Exit Node-express server based on https://stackoverflow.com/a/21739334
 process.on("SIGTERM", () => {
-  console.log("SIGTERM received, closing HTTP server...");
-  server.close((err) => {
-    console.log("HTTP server closed");
-    process.exit(err ? 1 : 0);
+  console.log("Received SIGTERM, process terminated...");
+  server.close((errSigterm) => {
+    console.log("Closing HTTP server after receiving SIGTERM..");
+    process.exit(errSigterm ? 1 : 0);
   });
 });
