@@ -30,8 +30,9 @@ const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use("/", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // Register route
-const { catchphrases } = require("./routes/index");
+const { catchphrases, healthcheck } = require("./routes/index");
 app.use("/catchphrases", catchphrases);
+app.use("/healthcheck", healthcheck);
 
 // Port and Host/Hostname configuration
 const PORT = process.env.PORT || 5000;
