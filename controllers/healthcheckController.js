@@ -3,8 +3,11 @@ const isServiceHealthy = (req, res, next) => {
   const timeElapsed = Date.now();
   const today = new Date(timeElapsed);
 
+  // Returns how many seconds NodeJS process is running (reference : https://nodejs.org/api/process.html#processuptime)
+  const processUptime = process.uptime();
+
   const healthyData = {
-    uptimeDuration: process.uptime(),
+    uptime: `The NodeJS process has been running for ${processUptime} seconds`,
     message: "Service is healthy !",
     time: today.toUTCString(),
 
