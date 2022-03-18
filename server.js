@@ -7,6 +7,10 @@ app.use(express.json());
 // x-www-urlencoded
 app.use(express.urlencoded({ extended: false }));
 
+// Use Helmet for security
+const helmet = require("helmet");
+app.use(helmet());
+
 // Connect to MongoDB
 const connectDb = require("./config/db");
 connectDb();
