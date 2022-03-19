@@ -31,12 +31,12 @@ const swaggerOptions = {
   apis: ["./routes/catchphrases.js"],
 };
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
-app.use("/", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // Register route
 const { catchphrases, healthcheck } = require("./routes/index");
 app.use("/catchphrases", catchphrases);
 app.use("/healthcheck", healthcheck);
+app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // Port and Host/Hostname configuration
 const PORT = process.env.PORT || 5000;
