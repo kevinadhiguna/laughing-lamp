@@ -4,7 +4,7 @@ require("dotenv").config();
 
 // parse requests of content-type : application/json
 app.use(express.json());
-// x-www-urlencoded
+// parse x-www-urlencoded
 app.use(express.urlencoded({ extended: false }));
 
 // Use Helmet for security
@@ -32,7 +32,7 @@ const swaggerOptions = {
 };
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 
-// Register route
+// Register routes
 const { catchphrases, healthcheck } = require("./routes/index");
 app.use("/catchphrases", catchphrases);
 app.use("/healthcheck", healthcheck);
