@@ -5,6 +5,7 @@ services:
     build: 
       context: .
       dockerfile: dev.Dockerfile
+    image: laughing-lamp_img
     container_name: laughing_lamp-ctr
     environment:
       PORT: ${PORT:-5000}
