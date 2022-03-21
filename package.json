@@ -14,6 +14,7 @@
     "pm2:list": "pm2 list",
     "pm2:monitor": "pm2 monit",
     "pm2:metadata": "pm2 show server",
+    "pm2:display-log": "pm2 logs server",
     "check": "prettier --check \"./**/*.{js,json}\"",
     "format": "prettier --write \"./**/*.{js,json}\" "
   },
