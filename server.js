@@ -53,6 +53,9 @@ const server = app.listen(PORT, HOSTNAME, () => {
 // Reference : https://dev.to/koresar/lil-http-terminator-a-tiny-js-module-to-gracefully-shutdown-your-http-server-l0b
 
 const httpTerminator = require("lil-http-terminator")({ server });
+// The line above is equivalent to :
+// const createHttpTerminator = require("lil-http-terminator");
+// const httpTerminator = createHttpTerminator({ server });
 
 const shutdown = async (signal) => {
   console.log(`\nReceived ${signal}, shutting down..`);
