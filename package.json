@@ -11,6 +11,7 @@
     "pm2:restart": "pm2 restart server.js",
     "pm2:stop": "pm2 stop server",
     "pm2:delete": "pm2 delete server",
+    "pm2:list": "pm2 list",
     "check": "prettier --check \"./**/*.{js,json}\"",
     "format": "prettier --write \"./**/*.{js,json}\" "
   },
