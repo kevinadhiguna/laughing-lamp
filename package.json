@@ -14,6 +14,7 @@
     "helmet": "^5.0.2",
     "lil-http-terminator": "^1.2.2",
     "mongoose": "^6.0.10",
+    "pm2": "^5.2.0",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.1.6"
   },
