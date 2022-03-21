@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "pm2:start": "pm2 start server.js",
+    "pm2:start": "pm2 start server.js --wait-ready",
     "pm2:start-dev": "pm2 start server.js --watch",
     "pm2:start-logStream": "pm2 start server.js --attach",
     "pm2:restart": "pm2 restart server.js",
