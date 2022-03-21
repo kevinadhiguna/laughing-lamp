@@ -10,6 +10,7 @@
     "pm2:start-logStream": "pm2 start server.js --attach",
     "pm2:restart": "pm2 restart server.js",
     "pm2:stop": "pm2 stop server",
+    "pm2:delete": "pm2 delete server",
     "check": "prettier --check \"./**/*.{js,json}\"",
     "format": "prettier --write \"./**/*.{js,json}\" "
   },
