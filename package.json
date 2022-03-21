@@ -8,6 +8,8 @@
     "pm2:start": "pm2 start server.js",
     "pm2:start-dev": "pm2 start server.js --watch",
     "pm2:start-logStream": "pm2 start server.js --attach",
+    "pm2:restart": "pm2 restart server.js",
+    "pm2:stop": "pm2 stop server",
     "check": "prettier --check \"./**/*.{js,json}\"",
     "format": "prettier --write \"./**/*.{js,json}\" "
   },
