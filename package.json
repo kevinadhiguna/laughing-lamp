@@ -13,6 +13,7 @@
     "pm2:delete": "pm2 delete server",
     "pm2:list": "pm2 list",
     "pm2:monitor": "pm2 monit",
+    "pm2:metadata": "pm2 show server",
     "check": "prettier --check \"./**/*.{js,json}\"",
     "format": "prettier --write \"./**/*.{js,json}\" "
   },
