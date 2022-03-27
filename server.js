@@ -73,3 +73,4 @@ const shutdown = async (signal) => {
 process.on("SIGINT", shutdown);
 process.on("SIGTERM", shutdown);
 process.on("uncaughtException", shutdown);
+process.on("unhandledRejection", shutdown);
