@@ -17,8 +17,8 @@
     "pm2:metadata": "pm2 show laughing-lamp",
     "pm2:display-log": "pm2 logs laughing-lamp",
     "pm2:plus": "pm2 plus",
-    "check": "prettier --check \"./**/*.{js,json,yml}\"",
-    "format": "prettier --write \"./**/*.{js,json,yml}\" "
+    "check": "prettier --check \"./**/*.{js,json,yml,md}\"",
+    "format": "prettier --write \"./**/*.{js,json,yml,md}\" "
   },
   "dependencies": {
     "dotenv": "^10.0.0",
